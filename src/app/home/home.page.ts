@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private router: Router) {}
+  redirectToLogin(){
+    this.router.navigate(['login'])
+  }
 }
