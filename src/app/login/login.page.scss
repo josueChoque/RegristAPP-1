@@ -2,15 +2,18 @@ ion-content{
     --background: rgb(98, 5, 219);
 }
 .logo{
-    margin-top: 20px;
-    margin-left: 50px;
-    height: 150vh;
-    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 290px;
+    margin-left: 100px;
+    margin-top: -250px;
   }
 .title{
+    
     font-size: 50px;
     color: white;
-    
     position: absolute;
     margin: 20px;
     top: 250px;
