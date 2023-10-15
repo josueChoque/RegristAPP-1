@@ -1,6 +1,8 @@
+/*fondo de pantalla*/
 ion-content{
     --background: #8A2BE2;
 }
+/*diseño del logo*/
 .logo{
     display: flex;
     justify-content: center;
@@ -10,8 +12,8 @@ ion-content{
     margin-left: 100px;
     margin-top: -250px;
   }
+  /*diseño del iniciar session*/
 .title{
-    
     font-size: 50px;
     color: white;
     position: absolute;
@@ -20,6 +22,7 @@ ion-content{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+/*color del input*/
 .user{
     color: rgba(255, 255, 255, 0.494);
 }
@@ -30,3 +33,36 @@ ion-list{
     top: 330px;
     right: 220px;
 }
+/*Diseño del buton ingresar*/
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -100%;
+  }
+  .button-ingr{
+    width: 140px;
+    height: 70px;
+    background-color: #993beb;
+    color: white;
+    border-radius: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: bold;
+  }
+  /*button de olvidaste la contraseña*/
+  .button-olvi{
+    display: flex;
+    top: 50px;
+    background-color: #993beb;
+    color: white;
+    font-size: 20px;
+  }
