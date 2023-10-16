@@ -1,6 +1,6 @@
 /*fondo de pantalla*/
 ion-content{
-    --background: #8A2BE2;
+    --background: rgb(98, 5, 219);
 }
 /*diseño del logo*/
 .logo{
@@ -9,7 +9,7 @@ ion-content{
     align-items: center;
     height: 100vh;
     width: 290px;
-    margin-left: 100px;
+    margin-left: 30px;
     margin-top: -250px;
   }
   /*diseño del iniciar session*/
@@ -17,7 +17,7 @@ ion-content{
     font-size: 50px;
     color: white;
     position: absolute;
-    margin: 20px;
+    margin: 10px;
     top: 250px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +31,7 @@ ion-list{
     position: absolute;
     font-size: 20px;
     top: 330px;
-    right: 220px;
+    right: 240px;
 }
 /*Diseño del buton ingresar*/
 .center-button {
@@ -41,8 +41,8 @@ ion-list{
     height: 100vh;
     margin-top: -100%;
   }
-  .button-ingr{
-    width: 140px;
+.button-ingr{
+  width: 140px;
     height: 70px;
     background-color: #993beb;
     color: white;
@@ -56,13 +56,31 @@ ion-list{
     cursor: pointer;
     border: none;
     outline: none;
-    font-weight: bold;
+  font-weight: bold;
+}
+/*button de olvidaste la contraseña*/
+ion-footer{
+  background-color: #6e16bb;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.olvi{
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+  @media screen and (max-width: 768px ){
+    .clase-elemento{
+      font-size: 14px;
+    }
   }
-  /*button de olvidaste la contraseña*/
-  .button-olvi{
-    display: flex;
-    top: 50px;
-    background-color: #993beb;
-    color: white;
-    font-size: 20px;
+  @media screen and (max-width: 768px ){
+    .imagen{
+      width: 80%;
+    }
   }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import {MatButtonModule,} from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import {MatIconModule} from '@angular/material/icon';
 import { AppComponent } from './app.component';
