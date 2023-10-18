@@ -11,6 +11,7 @@ export class LoginPage implements OnInit {
   @ViewChild(IonModal)modal!: IonModal;
 
   constructor(private router: Router, private auth: AutentificarService) { }
+  public mensaje = ""
   redirectToRestablecer(){
     this.router.navigate(['restablecer'])
   }
@@ -23,7 +24,34 @@ export class LoginPage implements OnInit {
   }
 
   informacionUsuario(){
-    this.auth
+    this.auth.login(this.user.usuario, this.user.password).then(()=> {
+      if (this.auth.autentificado){
+        let navigationExtras: NavigationExtras ={
+          state: { user: this.user}
+        }
+        this.router.navigate(['/inicio'], navigationExtras);
+      } else {
+        this.mensaje = "Ingresa tus Credenciales"
+      }
+    });
+  }
+
+  Consola(){
+    console.log(this.user);
+    if (this.user.usuario != "" && this.user.password != ""){
+      this.mensaje = "";
+    } else{
+      this.mensaje = ""
+    }
+  }
+
+  cancel(){
+    this.modal.dismiss(null,'cancel');
+  }
+  confirm(){
+    this.mensaje = " Registro Exitoso"
+    this.auth.register(this.user.usuario, this.user.password);
+    this.modal.dismiss(this.user.usuario, 'confirm');
   }
 
   ngOnInit() {

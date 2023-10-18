@@ -6,12 +6,45 @@
     Iniciar sesion
   </div>
   <ion-list>
-    <ion-input label="Usuario" label-placement="floating"   placeholder="juanito" type="Usuario" class="user" ></ion-input>
-    <ion-input label="Contraseña" label-placement="floating"   placeholder="Contraseña" type="Contraseña" class="user"></ion-input>
+    <ion-input [(ngModel)]="user.usuario" label="Usuario" label-placement="floating"   placeholder="juanito" type="Usuario" class="user" ></ion-input>
+    <ion-input [(ngModel)]="user.password" label="Contraseña" label-placement="floating"   placeholder="Contraseña" type="Contraseña" class="user"></ion-input>
   </ion-list>
   <div class="center-button">
-    <button (click)="redirectToInicio()" class="button-ingr">Ingresar</button>
+    <ion-button (click)="informacionUsuario()" size="small" shape="round" class="button-ingr">Ingresar</ion-button>
   </div>
+  <br>
+  <ion-button id="open-modal" shape="round" size="small">
+    Registrarse
+  </ion-button>
+
+  
+
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Salir</ion-button>
+          </ion-buttons>
+          <ion-title>Registro</ion-title>
+          <ion-buttons slot="end" id="present-alert">
+            <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-input [(ngModel)]="user.usuario" label="Nombre Usuario" labelPlacement="floating"
+            placeholder="Ingrese su Usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+            placeholder="Ingrese su Contraseña"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>
 <ion-footer>
   <button (click)="redirectToRestablecer()" class="olvi">¿Olvidaste tu Contaseña?</button>
