@@ -17,7 +17,10 @@
     Registrarse
   </ion-button>
 
-  
+  <div>
+    <h1>{{mensaje}}</h1>
+  </div>
+  <ion-alert trigger="present-alert" header="Registro" subHeader="{{mensaje}}" [buttons]="alertaButtons"></ion-alert>
 
   <ion-modal trigger="open-modal">
     <ng-template>

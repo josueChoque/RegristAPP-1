@@ -12,6 +12,7 @@ export class LoginPage implements OnInit {
 
   constructor(private router: Router, private auth: AutentificarService) { }
   public mensaje = ""
+  public alertaButtons = ['OK'];
   redirectToRestablecer(){
     this.router.navigate(['restablecer'])
   }
