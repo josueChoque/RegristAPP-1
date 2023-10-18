@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Storage } from '@ionic/storage-angular';
+import { Router, NavigationExtras } from '@angular/router';
+import { AutentificarService } from '../Servicios/autentificar.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private auth: AutentificarService) { }
   redirectToRestablecer(){
     this.router.navigate(['restablecer'])
   }
