@@ -10,12 +10,14 @@
     <ion-input [(ngModel)]="user.password" label="Contraseña" label-placement="floating"   placeholder="Contraseña" type="Contraseña" class="user"></ion-input>
   </ion-list>
   <div class="center-button">
-    <ion-button (click)="informacionUsuario()" size="small" shape="round" class="button-ingr">Ingresar</ion-button>
+    <ion-button (click)="informacionUsuario()" size="small" shape="round" class="button-ingr" class="color">Ingresar</ion-button>
   </div>
   <br>
-  <ion-button id="open-modal" shape="round" size="small">
-    Registrarse
-  </ion-button>
+  <div class="button-center">
+    <ion-button id="open-modal" shape="round" size="small" class="color">Registrarse
+    </ion-button>
+  </div>
+  
 
   <div>
     <h1>{{mensaje}}</h1>
