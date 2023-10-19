@@ -19,6 +19,7 @@
     </ion-button>
   </div>
   
+  <mat-progress-bar class="colormat" mode="indeterminate"></mat-progress-bar>
 
   <div>
     <h1>{{mensaje}}</h1>
@@ -41,11 +42,11 @@
       <ion-content class="ion-padding">
         <ion-item>
           <ion-input [(ngModel)]="user.usuario" label="Nombre Usuario" labelPlacement="floating"
-            placeholder="Ingrese su Usuario"></ion-input>
+            placeholder="Ingrese un Nombre"></ion-input>
         </ion-item>
         <ion-item>
           <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
-            placeholder="Ingrese su Contraseña"></ion-input>
+            placeholder="Crea una Contraseña"></ion-input>
         </ion-item>
       </ion-content>
     </ng-template>

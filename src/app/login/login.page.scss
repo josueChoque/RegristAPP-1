@@ -93,8 +93,13 @@ ion-footer{
   color: white;
   font-size: 20px;
 }
-
-
+.colormat{
+  background-color: yellow;
+}
+mat-progress-bar{
+  top: -13%;
+ 
+}
 
   @media screen and (max-width: 768px ){
     .clase-elemento{

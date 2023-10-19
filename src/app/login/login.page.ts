@@ -2,6 +2,7 @@ import { Component, OnInit,ElementRef ,ViewChild } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { AutentificarService } from '../Servicios/autentificar.service';
 import { IonModal, IonCard } from '@ionic/angular';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
