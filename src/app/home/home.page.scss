@@ -31,7 +31,26 @@ ion-content{
   height: 100vh;
   width: 70%;
   margin-left: 15%;
-  margin-top: -270%;
+  margin-top: -240%;
+}
+#inferior{
+  display: flex;
+  height: 25%;
+  margin-top: -17%;
+  max-width: 100%; 
+  max-height: 100%; 
+  min-width: 50px;
+  min-height: 50px;
+}
+#superior{
+  display: flex;
+  height: 25%;
+  margin-top: -225%;
+  margin-left: 50%;
+  max-width: 100%; 
+  max-height: 100%; 
+  min-width: 50px;
+  min-height: 50px;
 }
 @media screen and (max-width: 768px ){
   .clase-elemento{
@@ -41,5 +60,10 @@ ion-content{
 @media screen and (max-width: 768px ){
   .imagen{
     width: 80%;
+  }
+}
+@media (max-width: 768px){
+  #superior{
+    max-width: 90%;
   }
 }
