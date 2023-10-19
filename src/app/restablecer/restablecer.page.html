@@ -8,8 +8,7 @@
     <ion-input label="Email" label-placement="floating"   placeholder="juanito@duoc.cl"[(ngModel)]="email"></ion-input>
   </ion-list>
   <div class="center-button">
-    <ion-button (click)="resetPassword()" (click)="redirectToLogin()" size="small" shape="round">Enviar</ion-button>
+    <ion-button (click)="redirectToLogin()" (click)="resetPassword()" type="submit" [disabled]="!isValidEmail(email)" size="small" shape="round">Enviar</ion-button>
   </div>
-
-
+  <div *ngIf="!isValidEmail(email)" class="error-message">Debe Ingresar un correo valido!</div>
 </ion-content>

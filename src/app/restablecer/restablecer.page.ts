@@ -18,8 +18,17 @@ export class RestablecerPage implements OnInit {
     });
     toast.present();
   }
+  isValidEmail(email: string):boolean{
+    return email.includes('@');
+  }
   redirectToLogin(){
     this.router.navigate(['login'])
+    if(this.isValidEmail(this.email)){
+      console.log('Solicitud de recuperación enviada para:', this.email);
+    } 
+    else{
+      console.log('Correo electrónico no válido.');
+    }
   }
 
   ngOnInit() {
