@@ -98,16 +98,27 @@ ion-footer{
 }
 mat-progress-bar{
   top: -13%;
- 
 }
-
-  @media screen and (max-width: 768px ){
-    .clase-elemento{
-      font-size: 14px;
-    }
+.avatar{
+  transition: transform is linear;
+}
+.avatar.rotate{
+  transform: rotate(360deg);
+}
+.reg{
+  display: flex;
+  margin-top: 10vh;
+}
+ion-item{
+  top: 8vh;
+}
+@media screen and (max-width: 768px ){
+  .clase-elemento{
+    font-size: 14px;
   }
-  @media screen and (max-width: 768px ){
-    .imagen{
-      width: 80%;
-    }
   }
+@media screen and (max-width: 768px ){
+  .imagen{
+    width: 80%;
+  }
+}

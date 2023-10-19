@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <div class="logo">
-    <img src="../../assets/logoapp_20230914_210644_0000.png" alt="logo">
+    <img  src="../../assets/logoapp_20230914_210644_0000.png" alt="logo">
   </div>
   <img src="../../assets/triangulo.png" alt="triangulo" id="triangulo">
   <div class="title">
@@ -33,10 +33,8 @@
           <ion-buttons slot="start">
             <ion-button (click)="cancel()">Salir</ion-button>
           </ion-buttons>
-          <ion-title>Registro</ion-title>
-          <ion-buttons slot="end" id="present-alert">
-            <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
-          </ion-buttons>
+          <ion-title>Registrarse</ion-title>
+                    
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
@@ -48,10 +46,11 @@
           <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
             placeholder="Crea una Contraseña"></ion-input>
         </ion-item>
+        <ion-button class="reg" (click)="confirm()" [strong]="true">Confirmar</ion-button>
       </ion-content>
     </ng-template>
   </ion-modal>
-
+  
 </ion-content>
 <ion-footer>
   <button (click)="redirectToRestablecer()" class="olvi">¿Olvidaste tu Contaseña?</button>

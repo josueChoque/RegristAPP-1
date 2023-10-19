@@ -13,12 +13,14 @@ export class LoginPage implements OnInit {
   @ViewChild(IonCard, { read: ElementRef }) card!: ElementRef<HTMLIonCardElement>;
   passwordVisible: boolean = false;
   password: string = '';
-
+  isRotated = false;
   togglePasswordVisibility(){
     this.passwordVisible = !
     this.passwordVisible;
   }
-
+  toggleRotation() {
+    this.isRotated = !this.isRotated;
+  }
   constructor(private router: Router, private auth: AutentificarService) { }
   public mensaje = ""
   public alertaButtons = ['OK'];
