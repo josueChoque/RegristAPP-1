@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { InicioPage } from './inicio.page';
-
+/*import {UsuarioComponent } from '../'*/
 const routes: Routes = [
   {
     path: '',
     component: InicioPage
+    /*children:[{
+      path:'usuario',
+      component:UsuarioComponent
+    }]*/
   }
 ];
 
