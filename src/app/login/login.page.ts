@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit,ElementRef ,ViewChild } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 import { AutentificarService } from '../Servicios/autentificar.service';
-import { IonModal } from '@ionic/angular';
+import { IonModal, IonCard } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -9,6 +9,14 @@ import { IonModal } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   @ViewChild(IonModal)modal!: IonModal;
+  @ViewChild(IonCard, { read: ElementRef }) card!: ElementRef<HTMLIonCardElement>;
+  passwordVisible: boolean = false;
+  password: string = '';
+
+  togglePasswordVisibility(){
+    this.passwordVisible = !
+    this.passwordVisible;
+  }
 
   constructor(private router: Router, private auth: AutentificarService) { }
   public mensaje = ""

@@ -2,12 +2,13 @@
   <div class="logo">
     <img src="../../assets/logoapp_20230914_210644_0000.png" alt="logo">
   </div>
+  <img src="../../assets/triangulo.png" alt="triangulo" id="triangulo">
   <div class="title">
     Iniciar sesion
   </div>
   <ion-list>
     <ion-input [(ngModel)]="user.usuario" label="Usuario" label-placement="floating"   placeholder="juanito" type="Usuario" class="user" ></ion-input>
-    <ion-input [(ngModel)]="user.password" label="Contraseña" label-placement="floating"   placeholder="Contraseña" type="Contraseña" class="user"></ion-input>
+    <ion-input [(ngModel)]="user.password" label="Contraseña" label-placement="floating"   placeholder="Contraseña" type="{{ passwordVisible ? 'text' : 'password' }}" class="user"></ion-input>
   </ion-list>
   <div class="center-button">
     <ion-button (click)="informacionUsuario()" size="small" shape="round" class="button-ingr" class="color">Ingresar</ion-button>

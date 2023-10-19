@@ -2,9 +2,14 @@
 ion-content{
     --background: rgb(98, 5, 219);
 }
+/*imagen*/
+#triangulo{
+  margin-top: -10%;
+}
+/*Mensaje*/
 h1{
   display: flex;
-  margin-top: -30vh;
+  margin-top: -32vh;
   font-size: 20px;
   margin-left: 8vh;
 }
@@ -46,7 +51,7 @@ ion-list{
   width: 300px;
 }
 .center-button{
-  margin-top: -15%;
+  margin-top: -80%;
   margin-left: 35%;
 }
 .button-center{
