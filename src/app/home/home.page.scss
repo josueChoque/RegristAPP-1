@@ -23,29 +23,27 @@ ion-content{
   border: none;
   outline: none;
   font-weight: bold;
+  margin-top: 50vh;
+  position: absolute;
+  margin-left: 30%;
 }
 .logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 70%;
-  margin-left: 15%;
-  margin-top: -240%;
+  position: absolute;
+  margin-top: 40%;
+  margin-left: 10%;
 }
-#inferior{
-  display: flex;
+.inferior{
+  position: absolute;
   height: 25%;
-  margin-top: -17%;
+  margin-top: 161%;
   max-width: 100%; 
   max-height: 100%; 
   min-width: 50px;
   min-height: 50px;
 }
-#superior{
-  display: flex;
+.superior{
   height: 25%;
-  margin-top: -225%;
+  margin-top: 0%;
   margin-left: 50%;
   max-width: 100%; 
   max-height: 100%; 
@@ -58,12 +56,7 @@ ion-content{
   }
 }
 @media screen and (max-width: 768px ){
-  .imagen{
+  .logo{
     width: 80%;
-  }
-}
-@media (max-width: 768px){
-  #superior{
-    max-width: 90%;
   }
 }
