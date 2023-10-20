@@ -42,9 +42,7 @@ export class LoginPage implements OnInit {
           state: { user: this.user}
         }
         this.router.navigate(['/inicio'], navigationExtras);
-      } else {
-        this.mensaje = "Ingresa tus Credenciales"
-      }
+      } 
     });
   }
 
@@ -57,13 +55,12 @@ export class LoginPage implements OnInit {
     }
   }
 
-  cancel(){
-    this.modal.dismiss(null,'cancel');
+  Salir(){
+    this.modal.dismiss(null,'Salir');
   }
-  confirm(){
-    this.mensaje = " Registro Exitoso"
+  confirmarUsuario(){
     this.auth.register(this.user.usuario, this.user.password);
-    this.modal.dismiss(this.user.usuario, 'confirm');
+    this.modal.dismiss(this.user.usuario, 'confirmarUsuario');
   }
 
   ngOnInit() {
