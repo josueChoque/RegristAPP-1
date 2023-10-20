@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,13 @@ const routes: Routes = [
     path: 'restablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
   },
+  {
+    path: 'error',
+    component: ErrorComponent
+  },
+  {
+    path:'**', redirectTo:'/error'
+  }
 ];
 
 @NgModule({
