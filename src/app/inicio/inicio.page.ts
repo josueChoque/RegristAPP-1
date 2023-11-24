@@ -3,6 +3,7 @@ import { AuthGuard } from '../auth.guard';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 import { AlertController } from '@ionic/angular';
+import { Keyboard } from '@capacitor/keyboard';
 
 @Component({
   selector: 'app-inicio',
@@ -12,6 +13,7 @@ import { AlertController } from '@ionic/angular';
 export class InicioPage implements OnInit {
   isSupported = false;
   barcodes: Barcode[] = [];
+  
   constructor(private router: Router, private activatedRouter: ActivatedRoute, private authGuard: AuthGuard, private alertController: AlertController) { }
   public user = {
     usuario: "",
@@ -38,6 +40,8 @@ export class InicioPage implements OnInit {
     }
     const { barcodes } = await BarcodeScanner.scan();
     this.barcodes.push(...barcodes);
+
+    this.mostrarMensajeRegistroExitoso();
   }
 
   async requestPermissions(): Promise<boolean> {
@@ -53,5 +57,13 @@ export class InicioPage implements OnInit {
     });
     await alert.present();
   }
-
+  async mostrarMensajeRegistroExitoso() {
+    const alert = await this.alertController.create({
+      header: 'Éxito',
+      message: 'Registrado exitosamente',
+      buttons: ['OK'],
+    });
+    await alert.present();
+  }
+ 
 }
